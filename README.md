@@ -1,65 +1,65 @@
-# JavaScript Translation Repository
+# JavaScript Tərcümə Reposu
 
-## Table of Contents
+## Mündəricat
 
-1. [Introduction](#introduction)
-2. [Usage](#usage)
-3. [Contributing](#contributing)
-4. [Credits](#credits)
+1. [Təqdimat](#təqdimat)
+2. [İstifadə](#istifadə)
+3. [İştirak](#iştirak)
+4. [Etimad](#etimad)
 5. [new.target](#newtarget)
-6. [Translation](#translation)
+6. [Tərcümələr](#tərcümələr)
 
-## Introduction
+## Təqdimat
 
-Welcome to the **JavaScript Translation Repository**! This repository serves as a collection of translations of my Medium articles about JavaScript. Here, you'll find a treasure trove of knowledge and insights into the fascinating world of JavaScript, all presented in various languages.
+**JavaScript Tərcümə Reposu**na xoş gəlmisiniz! Bu repo JavaScript haqqında Medium məqalələrimin tərcümələri toplusu kimi xidmət edir. Burada siz müxtəlif dillərdə təqdim olunan JavaScript-in füsunkar dünyasına dair çoxlu bilik və fikirlər xəzinəsini tapacaqsınız.
 
-## About the Repository
+## Repo haqqında
 
-This repository is a compilation of my translated articles from Medium, where I share my thoughts, tutorials, and discoveries related to JavaScript. Each translation aims to make the content accessible to a wider audience by bringing it into different languages.
+Bu repo JavaScript ilə bağlı fikirlərimi, dərsliklərimi və kəşflərimi paylaşdığım Medium-dan tərcümə edilmiş məqalələrimin toplusudur. Hər bir tərcümə məzmunu müxtəlif dillərə çatdırmaqla daha geniş auditoriyaya əlçatan etmək məqsədi daşıyır.
 
-## Usage
+## İstifadə
 
-Feel free to explore the repository and browse through the available translations. You can navigate through the folders to find articles in specific languages. Each translated article is stored as a separate file, allowing for easy access and reference.
+Reponu tədqiq etməkdən və mövcud tərcümələrə baxmaqdan çəkinməyin. Xüsusi dillərdə məqalələr tapmaq üçün qovluqlar arasında gəzə bilərsiniz. Tərcümə edilmiş hər bir məqalə ayrıca fayl kimi saxlanılır ki, bu da asan əldə etmək və istinad etmək imkanı verir.
 
-To make the most of this repository, simply choose the language you prefer and dive into the articles. Whether you're a beginner or an experienced developer, you'll find a wealth of information and insights to expand your understanding of JavaScript.
+Bu repodan maksimum yararlanmaq üçün sadəcə olaraq üstünlük verdiyiniz dili seçin və məqalələrə daxil olun. İstər yeni başlayan, istərsə də təcrübəli tərtibatçı olmağınızdan asılı olmayaraq, JavaScript haqqında anlayışınızı genişləndirmək üçün çoxlu məlumat və anlayışlar tapacaqsınız.
 
-## Contributing
+## İştirak
 
-Contributions to this repository are welcome! If you're interested in translating one of my articles into another language, or if you'd like to suggest improvements to existing translations, please follow these steps:
+Bu repoya töhfələr qəbul edilir! Əgər siz mənim məqalələrimdən birini başqa dilə tərcümə etməkdə maraqlısınızsa və ya mövcud tərcümələrdə təkmilləşdirmələr təklif etmək istəyirsinizsə, lütfən, bu addımları yerinə yetirin:
 
-1. Fork this repository to your GitHub account.
-2. Create a new branch for your translation or changes.
-3. Make your modifications, ensuring accuracy and clarity in the translation.
-4. Commit your changes and push them to your forked repository.
-5. Submit a pull request, explaining the changes you've made and the language you've translated into.
+1. Bu reponu GitHub hesabınıza bağlayın.
+2. Tərcümə və ya dəyişiklikləriniz üçün yeni branch yaradın.
+3. Tərcümədə dəqiqliyi və aydınlığı təmin edərək, öz dəyişikliklərinizi edin.
+4. Dəyişikliklərinizi yerinə yetirin və onları fork reponuza pushlayın.
+5. Etdiyiniz dəyişiklikləri və tərcümə etdiyiniz dili izah edən pull request göndərin.
 
-Your contributions will help make JavaScript knowledge more accessible to people around the world.
+İştirakınız JavaScript biliklərini bütün dünyada insanlar üçün daha əlçatan etməyə kömək edəcək.
 
-## Credits
+## Etimad
 
-I would like to express my gratitude to all the contributors who have dedicated their time and effort to translate my articles. Your contributions are invaluable in spreading knowledge and bridging language barriers.
+Məqalələrimi tərcümə etmək üçün vaxt və səylərini sərf edən bütün iştirakçılara təşəkkürümü bildirmək istəyirəm. Biliyin yayılmasında və dil maneələrinin aradan qaldırılmasında töhfələriniz əvəzsizdir.
 
-## Contact
+## Əlaqə
 
-If you have any questions, suggestions, or feedback regarding this repository or the translations, please feel free to reach out to me. You can contact me through GitHub or find my contact information on my Medium profile.
+Bu repozitoriya və ya tərcümələrlə bağlı hər hansı sualınız, təklifiniz və ya rəyiniz varsa, lütfən mənimlə əlaqə saxlayın. GitHub vasitəsilə mənimlə əlaqə saxlaya və ya əlaqə məlumatımı Medium profilimdə tapa bilərsiniz.
 
-Thank you for your interest in my translated JavaScript articles! Together, let's empower developers worldwide with the knowledge they need to excel in their JavaScript journey.
+Tərcümə edilmiş JavaScript məqalələrimə maraq göstərdiyiniz üçün təşəkkür edirəm! Gəlin birlikdə dünya üzrə tərtibatçıları JavaScript səyahətlərində üstün olmaq üçün lazım olan biliklərlə gücləndirək.
 
-Happy coding and happy translating!
+Xoş kodlaşdırma və xoş tərcümələr!
 
 ## Newtarget
 
-### Introduction:
+### Giriş:
 
-JavaScript is a realm of wonders and mysteries, filled with hidden gems that await discovery. One such gem is the `new.target` property, a special and enchanting feature that allows us to unravel the secrets of constructors and their derived classes. In this epic article, we embark on a journey through the realm of new.target, with a touch of humor and whimsical variable names that will make you chuckle.
+JavaScript kəşf gözləyən gizli qiymətli daşlarla dolu möcüzələr və sirlər aləmidir. Belə incilərdən biri konstruktorların və onların törəmə siniflərinin sirlərini açmağa imkan verən xüsusi və sehrli xüsusiyyət olan “new.target” xüsusiyyətidir. Bu epik məqalədə biz sizi güldürəcək yumoristik və məzəli dəyişən adlarla new.target aləmində səyahətə çıxırıq.
 
-### The Mysterious new.target Property:
+### Sirli new.target xassəsi:
 
-Let us introduce you to our first hero, `new.target`. It is a property that is automatically defined within the scope of a constructor function or method when it is invoked with the `new` keyword. This magical property holds a reference to the constructor or class that was directly invoked, enabling us to understand the true origins of an instance.
+Gəlin sizi ilk qəhrəmanımız olan `new.target` ilə tanış edək. Bu, `new` açar sözü ilə çağırılan zaman konstruktor funksiyası və ya metodu daxilində avtomatik müəyyən edilən xüsusiyyətdir. Bu sehrli xüsusiyyət birbaşa çağırılan konstruktora və ya sinfə istinad edir və bizə nümunənin əsl mənşəyini anlamağa imkan verir.
 
-### The Great Constructor Quest:
+### Böyük Konstruktor Axtarışı:
 
-Imagine we have a fantastical land of creatures known as “Animals,” each with their unique abilities and characteristics. Our constructors are named in a rather whimsical fashion, adding a touch of mirth to our tale. Let’s meet our heroes:
+Təsəvvür edin ki, bizdə “Heyvanlar” kimi tanınan, hər biri özünəməxsus qabiliyyət və xüsusiyyətlərə malik fantastik canlılar diyarı var. Konstruktorlarımız olduqca məzəli bir şəkildə adlanır və nağılımıza maraq əlavə edir. Qəhrəmanlarımızla tanış olaq:
 
 ```js
 
@@ -75,10 +75,10 @@ class Animal {
 }
 ```
 
-In the above example, when we create an instance using `new Animal()`, the `new.target` property within the constructor will refer to the Animal constructor itself. However, if we create an instance using a derived class, such as `new Dog()`, the `new.target` property will point to the derived class instead.
+Yuxarıdakı misalda biz `new Animal()` istifadə edərək nümunə yaratdıqda, konstruktor daxilindəki `new.target` xüsusiyyəti Animal konstruktorunun özünə istinad edəcək. Bununla belə, `new Dog()` kimi törəmə sinifdən istifadə edərək nümunə yaratsaq, `new.target` xassəsi bunun əvəzinə törəmə sinfi göstərəcək.
 
-Deriving Marvelous Creatures:
-Now, let's introduce a derived class named Dog that inherits from our beloved Animal:
+Möhtəşəm məxluqların törəməsi:
+İndi isə sevimli Heyvanımızdan miras qalan Dog adlı törəmə sinfi təqdim edək:
 
 ```js
 
@@ -90,15 +90,13 @@ class Dog extends Animal {
 }
 ```
 
-When we create a new instance of Dog using `new Dog()`, the constructor is executed. As a result, both the Animal and Dog constructors are invoked in a cascading manner. With the help of `new.target`, we can differentiate between instances of Animal and Dog, unraveling the secret behind their creation.
+Biz `new Dog()` istifadə edərək yeni İt nümunəsini yaratdıqda konstruktor yerinə yetirilir. Nəticədə, həm Heyvan, həm də İt konstruktorları kaskad şəkildə çağırılır. `New.target` köməyi ilə biz Heyvan və İt nümunələrini fərqləndirə, onların yaradılmasının sirrini aça bilərik.
 
-The Mighty Summoner:
-But wait, there's more! The power of new.target extends beyond constructors. It can also be utilized within static methods and non-constructor functions:
+Qüdrətli Çağırıcı:
+Amma gözləyin, daha çox var! new.target-in gücü konstruktorlardan kənara çıxır. O, həmçinin statik metodlar və qeyri-konstruktor funksiyaları daxilində istifadə oluna bilər:
 
 
-## Translation
 
-This is also available in other languages:
 
 ```js
 
@@ -110,19 +108,23 @@ function summonAnimal() {
   }
 }
 ```
-In this peculiar function, when we call summonAnimal() directly, `new.target` will be undefined. However, if we use new summonAnimal(), new.target will refer to the function itself, indicating that it was invoked as a constructor.
+Bu özünəməxsus funksiyada biz summonAnimal() funksiyasını birbaşa çağırdığımızda, `new.target` qeyri-müəyyən olacaq. Bununla belə, əgər biz new summonAnimal() funksiyasından istifadə etsək, new.target funksiyanın özünə istinad edəcək və onun konstruktor kimi çağırıldığını göstərir.
 
-Conclusion:
-We have embarked on a thrilling adventure into the realm of new.target, discovering its magical powers and unraveling the mysteries of constructors and derived classes. With a touch of whimsy and amusing variable names, we hope this journey has brought a smile to your face.
+Nəticə:
+Biz new.target səltənətində həyəcanverici macəraya başladıq, onun sehrli güclərini kəşf etdik və konstruktorların və törəmə siniflərin sirlərini açdıq. Məzəli və əyləncəli dəyişən adların toxunuşu ilə ümid edirik ki, bu səyahət üzünüzə təbəssüm gətirdi.
 
-Remember, as developers, it's not just about unraveling complexities but also embracing the joy and humor that can be found in our code. So go forth, explore, and let your code be a reflection of your imagination and wit!
+Bir tərtibatçı olaraq,unutmayın ki bu, təkcə mürəkkəblikləri aradan qaldırmaq deyil, həm də kodumuzda tapıla bilən məzəli və yumoru əhatə etməkdir. 
 
-Happy coding, adventurers!
+Xoş kodlaşdırmalar, macəraçılar!
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ əvvələ](#Mündəricat)**
+
+## Tərcümələr
+
+Bu digər dillərdə də mövcuddur:
 
 - ![az](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Azerbaijan.png) **Azerbaijan**: [javidselimov/jsworldjs](https://github.com/javidselimov/jsworldjs)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ əvvələ](#Mündəricat)**
 
 
