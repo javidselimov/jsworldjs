@@ -6,7 +6,7 @@
 2. [Usage](#usage)
 3. [Contributing](#contributing)
 4. [Credits](#credits)
-5. [new.target](#new.target)
+5. [new.target](#newtarget)
 6. [Translation](#translation)
 
 ## Introduction
@@ -47,7 +47,7 @@ Thank you for your interest in my translated JavaScript articles! Together, let'
 
 Happy coding and happy translating!
 
-## New.target
+## Newtarget
 
 ### Introduction:
 
