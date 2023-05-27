@@ -1,5 +1,15 @@
 # JavaScript Translation Repository
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Usage](#usage)
+3. [Contributing](#contributing)
+4. [Credits](#credits)
+5. [Translation](#translation)
+
+## Introduction
+
 Welcome to the **JavaScript Translation Repository**! This repository serves as a collection of translations of my Medium articles about JavaScript. Here, you'll find a treasure trove of knowledge and insights into the fascinating world of JavaScript, all presented in various languages.
 
 ## About the Repository
@@ -35,3 +45,5 @@ If you have any questions, suggestions, or feedback regarding this repository or
 Thank you for your interest in my translated JavaScript articles! Together, let's empower developers worldwide with the knowledge they need to excel in their JavaScript journey.
 
 Happy coding and happy translating!
+
+
