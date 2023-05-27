@@ -51,11 +51,11 @@ Happy coding and happy translating!
 
 ### Introduction:
 
-JavaScript is a realm of wonders and mysteries, filled with hidden gems that await discovery. One such gem is the new.target property, a special and enchanting feature that allows us to unravel the secrets of constructors and their derived classes. In this epic article, we embark on a journey through the realm of new.target, with a touch of humor and whimsical variable names that will make you chuckle.
+JavaScript is a realm of wonders and mysteries, filled with hidden gems that await discovery. One such gem is the `new.target` property, a special and enchanting feature that allows us to unravel the secrets of constructors and their derived classes. In this epic article, we embark on a journey through the realm of new.target, with a touch of humor and whimsical variable names that will make you chuckle.
 
 ### The Mysterious new.target Property:
 
-Let us introduce you to our first hero, new.target. It is a property that is automatically defined within the scope of a constructor function or method when it is invoked with the new keyword. This magical property holds a reference to the constructor or class that was directly invoked, enabling us to understand the true origins of an instance.
+Let us introduce you to our first hero, `new.target`. It is a property that is automatically defined within the scope of a constructor function or method when it is invoked with the `new` keyword. This magical property holds a reference to the constructor or class that was directly invoked, enabling us to understand the true origins of an instance.
 
 ### The Great Constructor Quest:
 
@@ -75,7 +75,7 @@ class Animal {
 }
 ```
 
-In the above example, when we create an instance using new Animal(), the new.target property within the constructor will refer to the Animal constructor itself. However, if we create an instance using a derived class, such as new Dog(), the new.target property will point to the derived class instead.
+In the above example, when we create an instance using `new Animal()`, the `new.target` property within the constructor will refer to the Animal constructor itself. However, if we create an instance using a derived class, such as `new Dog()`, the `new.target` property will point to the derived class instead.
 
 Deriving Marvelous Creatures:
 Now, let's introduce a derived class named Dog that inherits from our beloved Animal:
@@ -90,7 +90,7 @@ class Dog extends Animal {
 }
 ```
 
-When we create a new instance of Dog using new Dog(), the constructor is executed. As a result, both the Animal and Dog constructors are invoked in a cascading manner. With the help of new.target, we can differentiate between instances of Animal and Dog, unraveling the secret behind their creation.
+When we create a new instance of Dog using `new Dog()`, the constructor is executed. As a result, both the Animal and Dog constructors are invoked in a cascading manner. With the help of `new.target`, we can differentiate between instances of Animal and Dog, unraveling the secret behind their creation.
 
 The Mighty Summoner:
 But wait, there's more! The power of new.target extends beyond constructors. It can also be utilized within static methods and non-constructor functions:
@@ -110,7 +110,7 @@ function summonAnimal() {
   }
 }
 ```
-In this peculiar function, when we call summonAnimal() directly, new.target will be undefined. However, if we use new summonAnimal(), new.target will refer to the function itself, indicating that it was invoked as a constructor.
+In this peculiar function, when we call summonAnimal() directly, `new.target` will be undefined. However, if we use new summonAnimal(), new.target will refer to the function itself, indicating that it was invoked as a constructor.
 
 Conclusion:
 We have embarked on a thrilling adventure into the realm of new.target, discovering its magical powers and unraveling the mysteries of constructors and derived classes. With a touch of whimsy and amusing variable names, we hope this journey has brought a smile to your face.
