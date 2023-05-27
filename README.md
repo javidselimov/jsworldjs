@@ -46,4 +46,13 @@ Thank you for your interest in my translated JavaScript articles! Together, let'
 
 Happy coding and happy translating!
 
+## Translation
+
+This is also available in other languages:
+
+
+- ![az](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Iran.png) **Azerbaijan**: [javidselimov/jsworldjs](https://github.com/javidselimov/jsworldjs)
+
+**[⬆ back to top](#table-of-contents)**
+
 
