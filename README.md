@@ -265,6 +265,25 @@ Similarly, we bind the UserService class to the container.
 
 Finally, we use the get() method of the container to resolve an instance of UserService. The container automatically resolves the dependencies, in this case, the Database instance, and injects it into the UserService constructor.
 
+
+The inversify library does indeed exist and is commonly used for dependency injection in TypeScript projects. It is a popular and widely adopted library for managing dependencies and performing inversion of control in TypeScript.
+
+To use the inversify library, you will need to install it via npm or yarn. You can do so by running the following command in your project directory:
+
+```
+npm install inversify reflect-metadata
+```
+Once installed, you can import the necessary decorators and classes from the library, as shown in the example code.
+
+```ts
+
+import { injectable, inject, Container } from "inversify";
+
+// Rest of the code remains the same...
+
+```
+
+
 Dependency injection is a powerful technique for managing dependencies in JavaScript and TypeScript applications. By externalizing dependency creation and management, we can achieve greater flexibility, testability, and maintainability. In JavaScript, we explored advanced examples of dependency injection, including constructor injection, property injection, and method injection. Additionally, we discussed an alternative implementation in TypeScript using decorators and interfaces. Leveraging these techniques can significantly improve the architecture and quality of your codebase.
 
 Remember, embracing dependency injection enables clean and modular designs that foster code reusability and ease of maintenance, leading to more robust and scalable applications.
