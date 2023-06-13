@@ -206,6 +206,65 @@ const userService = container.get<UserService>(UserService);
 
 ```
 
+more accurate example
+
+```js
+import { injectable, inject, Container } from "inversify";
+
+// Define an interface for the database
+interface IDatabase {
+  // Database methods...
+}
+
+// Implement the database using the IDatabase interface
+@injectable()
+class Database implements IDatabase {
+  // Implement database methods...
+}
+
+// Define the UserService class with dependency injection
+@injectable()
+class UserService {
+  constructor(@inject("Database") private database: IDatabase) {
+    // The database dependency is automatically injected via constructor
+  }
+
+  // Class methods...
+}
+
+// Create an instance of the container
+const container = new Container();
+
+// Bind the IDatabase interface to the Database implementation
+container.bind<IDatabase>("Database").to(Database);
+
+// Bind the UserService class
+container.bind<UserService>(UserService);
+
+// Resolve the UserService instance from the container
+const userService = container.get<UserService>(UserService);
+```
+
+We import the necessary decorators and classes from the inversify library.
+
+We define the IDatabase interface that specifies the methods expected from a database.
+
+The Database class implements the IDatabase interface.
+
+We use the @injectable() decorator to mark the Database class as injectable. This decorator allows the container to recognize it as a dependency that can be resolved and injected.
+
+The UserService class is marked as injectable using the @injectable() decorator. The class has a constructor that accepts a parameter named database of type IDatabase.
+
+We use the @inject() decorator on the database parameter to specify that it should be resolved using the binding named "Database". This decorator tells the container to inject the Database instance when creating an instance of UserService.
+
+We create an instance of the Container class from the inversify library, which acts as the container for managing and resolving dependencies.
+
+Using the bind() method of the container, we associate the IDatabase interface with the Database implementation. This binding tells the container how to resolve the IDatabase dependency when it's requested.
+
+Similarly, we bind the UserService class to the container.
+
+Finally, we use the get() method of the container to resolve an instance of UserService. The container automatically resolves the dependencies, in this case, the Database instance, and injects it into the UserService constructor.
+
 Dependency injection is a powerful technique for managing dependencies in JavaScript and TypeScript applications. By externalizing dependency creation and management, we can achieve greater flexibility, testability, and maintainability. In JavaScript, we explored advanced examples of dependency injection, including constructor injection, property injection, and method injection. Additionally, we discussed an alternative implementation in TypeScript using decorators and interfaces. Leveraging these techniques can significantly improve the architecture and quality of your codebase.
 
 Remember, embracing dependency injection enables clean and modular designs that foster code reusability and ease of maintenance, leading to more robust and scalable applications.
