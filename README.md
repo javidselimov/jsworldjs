@@ -7,7 +7,8 @@
 3. [Contributing](#contributing)
 4. [Credits](#credits)
 5. [new.target](#newtarget)
-6. [Translation](#translation)
+6. [Dependency Injection](#dependency-injection)
+7. [Translation](#translation)
 
 ## Introduction
 
@@ -92,8 +93,103 @@ class Dog extends Animal {
 
 When we create a new instance of Dog using `new Dog()`, the constructor is executed. As a result, both the Animal and Dog constructors are invoked in a cascading manner. With the help of `new.target`, we can differentiate between instances of Animal and Dog, unraveling the secret behind their creation.
 
-The Mighty Summoner:
-But wait, there's more! The power of new.target extends beyond constructors. It can also be utilized within static methods and non-constructor functions:
+**[⬆ back to top](#table-of-contents)**
+
+## Dependency Injection
+
+In modern software development, managing dependencies efficiently is crucial for building robust and maintainable applications. One technique that aids in achieving this is dependency injection (DI). In this article, we will explore the concept of dependency injection, delve into advanced examples in JavaScript, and touch upon its alternative implementation in TypeScript.
+
+Understanding Dependency Injection:
+Dependency injection is a design pattern that promotes loose coupling by externalizing the creation and management of dependencies. Rather than a class instantiating its dependencies internally, the dependencies are provided externally, allowing for better flexibility, testability, and scalability.
+
+Let's dive into a few advanced examples of dependency injection in JavaScript:
+
+Constructor Injection:
+Constructor injection involves passing dependencies to a class through its constructor. Here's an example:
+
+```javascript
+class UserService {
+  constructor(database) {
+    this.database = database;
+  }
+
+  // Class methods...
+}
+
+const database = new Database();
+const userService = new UserService(database);
+```
+
+Property Injection:
+In property injection, dependencies are assigned to class properties. This approach is useful when dealing with optional dependencies. Consider the following example:
+
+```javascript
+
+class Logger {
+  setAnalytics(analytics) {
+    this.analytics = analytics;
+  }
+
+  // Class methods...
+}
+
+const logger = new Logger();
+const analytics = new Analytics();
+logger.setAnalytics(analytics);
+```
+Method Injection:
+Method injection involves passing dependencies as arguments to class methods. This approach enables selective injection of dependencies. Here's an example:
+
+```javascript
+
+class EmailService {
+  sendEmail(message, notificationService) {
+    // Send email using the notification service
+  }
+
+  // Class methods...
+}
+
+const emailService = new EmailService();
+const notificationService = new NotificationService();
+emailService.sendEmail("Hello, world!", notificationService);
+
+```
+
+Alternative Implementation in TypeScript:
+TypeScript provides additional features for dependency injection through its support for decorators and interfaces. Let's explore an alternative approach using TypeScript:
+
+```typescript
+
+interface IDatabase {
+  // Database methods...
+}
+
+@injectable()
+class Database implements IDatabase {
+  // Implement database methods...
+}
+
+@injectable()
+class UserService {
+  constructor(@inject("Database") private database: IDatabase) {}
+
+  // Class methods...
+}
+
+const container = new Container();
+container.bind<IDatabase>("Database").to(Database);
+container.bind<UserService>(UserService);
+
+const userService = container.get<UserService>(UserService);
+
+```
+
+Dependency injection is a powerful technique for managing dependencies in JavaScript and TypeScript applications. By externalizing dependency creation and management, we can achieve greater flexibility, testability, and maintainability. In JavaScript, we explored advanced examples of dependency injection, including constructor injection, property injection, and method injection. Additionally, we discussed an alternative implementation in TypeScript using decorators and interfaces. Leveraging these techniques can significantly improve the architecture and quality of your codebase.
+
+Remember, embracing dependency injection enables clean and modular designs that foster code reusability and ease of maintenance, leading to more robust and scalable applications.
+
+**[⬆ back to top](#table-of-contents)**
 
 
 ## Translation
@@ -124,5 +220,6 @@ Happy coding, adventurers!
 - ![az](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Azerbaijan.png) **Azerbaijan**: [javidselimov/jsworldjs](https://github.com/javidselimov/jsworldjs)
 
 **[⬆ back to top](#table-of-contents)**
+
 
 
