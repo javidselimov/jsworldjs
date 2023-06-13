@@ -93,6 +93,27 @@ class Dog extends Animal {
 
 When we create a new instance of Dog using `new Dog()`, the constructor is executed. As a result, both the Animal and Dog constructors are invoked in a cascading manner. With the help of `new.target`, we can differentiate between instances of Animal and Dog, unraveling the secret behind their creation.
 
+```js
+
+function summonAnimal() {
+  if (new.target) {
+    console.log('An Animal is being summoned!');
+  } else {
+    console.log('An Animal is appearing through unknown means!');
+  }
+}
+```
+In this peculiar function, when we call summonAnimal() directly, `new.target` will be undefined. However, if we use new summonAnimal(), new.target will refer to the function itself, indicating that it was invoked as a constructor.
+
+Conclusion:
+We have embarked on a thrilling adventure into the realm of new.target, discovering its magical powers and unraveling the mysteries of constructors and derived classes. With a touch of whimsy and amusing variable names, we hope this journey has brought a smile to your face.
+
+Remember, as developers, it's not just about unraveling complexities but also embracing the joy and humor that can be found in our code. So go forth, explore, and let your code be a reflection of your imagination and wit!
+
+Happy coding, adventurers!
+
+
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Dependency Injection
@@ -192,28 +213,6 @@ Remember, embracing dependency injection enables clean and modular designs that 
 **[⬆ back to top](#table-of-contents)**
 
 
-
-
-```js
-
-function summonAnimal() {
-  if (new.target) {
-    console.log('An Animal is being summoned!');
-  } else {
-    console.log('An Animal is appearing through unknown means!');
-  }
-}
-```
-In this peculiar function, when we call summonAnimal() directly, `new.target` will be undefined. However, if we use new summonAnimal(), new.target will refer to the function itself, indicating that it was invoked as a constructor.
-
-Conclusion:
-We have embarked on a thrilling adventure into the realm of new.target, discovering its magical powers and unraveling the mysteries of constructors and derived classes. With a touch of whimsy and amusing variable names, we hope this journey has brought a smile to your face.
-
-Remember, as developers, it's not just about unraveling complexities but also embracing the joy and humor that can be found in our code. So go forth, explore, and let your code be a reflection of your imagination and wit!
-
-Happy coding, adventurers!
-
-**[⬆ back to top](#table-of-contents)**
 ## Translation
 
 This is also available in other languages:
