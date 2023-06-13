@@ -7,7 +7,8 @@
 3. [İştirak](#iştirak)
 4. [Etimad](#etimad)
 5. [new.target](#newtarget)
-6. [Tərcümələr](#tərcümələr)
+6. [Dependency injection](#dependency-injection)
+7. [Tərcümələr](#tərcümələr)
 
 ## Təqdimat
 
@@ -118,6 +119,101 @@ Bir tərtibatçı olaraq,unutmayın ki bu, təkcə mürəkkəblikləri aradan qa
 Xoş kodlaşdırmalar, macəraçılar!
 
 **[⬆ əvvələ](#Mündəricat)**
+
+## Dependency Injection
+
+Müasir proqram təminatının işlənib hazırlanmasında asılılıqların səmərəli şəkildə idarə edilməsi və davamlı tətbiqlər yaratmaq üçün çox vacibdir. Buna nail olmağa kömək edən bir texnika Dependency Injection dur (DI). Bu yazıda biz DI anlayışını araşdıracağıq, JavaScript-də qabaqcıl nümunələri baxacaq və onun TypeScript-də alternativ tətbiqinə toxunacağıq.
+
+DI başa düşmək: DI, asılılıqların yaradılması və idarə edilməsini təşviq edən dizayn nümunəsidir. Asılılıqlarını daxili olaraq quran bir sinif əvəzinə, asılılıqlar xaricdən təmin edilir və daha yaxşı çevikliyə imkan verir.
+
+JavaScript-də Dİ nin bir neçə qabaqcıl nümunəsinə nəzər salaq:
+
+Konstruktor inyeksiyası: Konstruktor inyeksiyası onun konstruktoru vasitəsilə sinfə asılılıqların ötürülməsini nəzərdə tutur. Nümunə:
+
+``` javascript
+
+class UserService {
+  constructor(database) {
+    this.database = database;
+  }
+
+  // Class methods...
+}
+
+const database = new Database();
+const userService = new UserService(database);
+
+```
+
+Property inyeksiyası: Property inyeksiyasında asılılıqlar sinif xassələrinə təyin edilir. Bu yanaşma istəyə bağlı asılılıqlarla məşğul olduqda faydalıdır. Aşağıdakı misalı nəzərdən keçirək:
+
+``` javascript
+
+class Logger {
+  setAnalytics(analytics) {
+    this.analytics = analytics;
+  }
+
+  // Class methods...
+}
+
+const logger = new Logger();
+const analytics = new Analytics();
+logger.setAnalytics(analytics);
+
+```
+
+Metod inyeksiyası: Metod inyeksiyası asılılıqların sinif metodlarına arqument kimi ötürülməsini nəzərdə tutur. Bu yanaşma asılılıqların seçmə inyeksiyasına imkan verir. Budur bir nümunə:
+
+```javascript
+
+class EmailService {
+  sendEmail(message, notificationService) {
+    // Send email using the notification service
+  }
+
+  // Class methods...
+}
+
+const emailService = new EmailService();
+const notificationService = new NotificationService();
+emailService.sendEmail("Hello, world!", notificationService);
+
+```
+
+TypeScript dekoratorlar və interfeyslər üçün dəstəyi vasitəsilə asılılıq inyeksiyası üçün əlavə funksiyalar təqdim edir. TypeScript istifadə edərək alternativ yanaşmanı araşdıraq:
+
+```typescript
+
+
+interface IDatabase {
+  // Database methods...
+}
+
+@injectable()
+class Database implements IDatabase {
+  // Implement database methods...
+}
+
+@injectable()
+class UserService {
+  constructor(@inject("Database") private database: IDatabase) {}
+
+  // Class methods...
+}
+
+const container = new Container();
+container.bind<IDatabase>("Database").to(Database);
+container.bind<UserService>(UserService);
+
+const userService = container.get<UserService>(UserService);
+
+
+```
+
+JavaScript-də biz Dİ inkişaf etmiş nümunələrini araşdırdıq, o cümlədən konstruktor inyeksiyası, property inyeksiyası və metod inyeksiyası ilə tanış olduq. Bundan əlavə, biz dekoratorlar və interfeyslərdən istifadə edərək TypeScript-də alternativ tətbiqi müzakirə etdik. Bu üsullardan istifadə kod bazanızın arxitekturasını və keyfiyyətini əhəmiyyətli dərəcədə yaxşılaşdıra bilərsiniz.
+
+Unutmayın ki, asılılıq inyeksiyasının tətbiqi kodun təkrar istifadəsini və texniki cəhətdən təmiz və modulyar dizaynlara imkan verir, daha səliqəli və genişlənə bilən struktura gətirib çıxarır.
 
 ## Tərcümələr
 
