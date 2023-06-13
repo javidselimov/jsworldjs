@@ -192,9 +192,7 @@ Remember, embracing dependency injection enables clean and modular designs that 
 **[⬆ back to top](#table-of-contents)**
 
 
-## Translation
 
-This is also available in other languages:
 
 ```js
 
@@ -216,8 +214,11 @@ Remember, as developers, it's not just about unraveling complexities but also em
 Happy coding, adventurers!
 
 **[⬆ back to top](#table-of-contents)**
+## Translation
 
-- ![az](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Azerbaijan.png) **Azerbaijan**: [javidselimov/jsworldjs](https://github.com/javidselimov/jsworldjs)
+This is also available in other languages:
+
+- ![az](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Azerbaijan.png) **Azerbaijan**: [javidselimov/jsworldjs/tree/az-translate](https://github.com/javidselimov/jsworldjs/tree/az-translate)
 
 **[⬆ back to top](#table-of-contents)**
 
