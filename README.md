@@ -8,7 +8,8 @@
 4. [Etimad](#etimad)
 5. [new.target](#newtarget)
 6. [Dependency injection](#dependency-injection)
-7. [Tərcümələr](#tərcümələr)
+7. [Memoization](#memoization)
+8. [Tərcümələr](#tərcümələr)
 
 ## Təqdimat
 
@@ -214,6 +215,63 @@ const userService = container.get<UserService>(UserService);
 JavaScript-də biz Dİ inkişaf etmiş nümunələrini araşdırdıq, o cümlədən konstruktor inyeksiyası, property inyeksiyası və metod inyeksiyası ilə tanış olduq. Bundan əlavə, biz dekoratorlar və interfeyslərdən istifadə edərək TypeScript-də alternativ tətbiqi müzakirə etdik. Bu üsullardan istifadə kod bazanızın arxitekturasını və keyfiyyətini əhəmiyyətli dərəcədə yaxşılaşdıra bilərsiniz.
 
 Unutmayın ki, asılılıq inyeksiyasının tətbiqi kodun təkrar istifadəsini və texniki cəhətdən təmiz və modulyar dizaynlara imkan verir, daha səliqəli və genişlənə bilən struktura gətirib çıxarır.
+
+## Memoization
+
+JavaScript müsahibələri dünyasında Memoization anlayışı tez-tez ortaya çıxır və tərtibatçıları problem həll etmə bacarıqlarını nümayiş etdirməyə yönəlmiş bir sualdır. Təxminən 7–8 dəqiqəlik müsahibə vaxtı sərf edərək probleminin effektiv həllini təqdim etmək, xüsusən də orta səviyyədə olan bir tərtibatçının səriştəsinin güclü göstəricisi ola bilər. Memoization bir vaxtlar əl ilə həyata keçirilən bir texnika olsa da, React kimi müasir frameworklar və kitabxanalar bu problemi asanlıqla həll etmək üçün öz hook və mexanizmlərini təqdim etdilər. Bununla belə, bu məqalədə biz yalnız bu güclü texnikanın JavaScript ilə tətbiqinə diqqət yetirəcəyik. Memoizasiya dünyasına getməyə hazır olun və peşəkar kimi performansı optimallaşdırmağı öyrənin.
+Nümunəyə baxaq:
+
+```js
+
+// First creting a counter to see the result of cashing
+let counter = 0;
+//  Creating Memo function which accepts a callback
+
+function Memo(callback) {
+  //  creating a variable to kepp on unique key the value of the callback function but first this will assign to emty object
+  const cash = {};
+  // this function must return a new function which will take arguments ...args
+
+  return (...args) => {
+    const key = args.join("-"); //  alternatively we can use JSON.stringify(...args)
+
+    if (key in cash) {
+      return cash[key];
+    }
+
+    cash[key] = callback(...args);
+    //  ading counter ühen not calling from cash
+    counter += 1;
+    return cash[key];
+  };
+}
+
+const memoizedFunc = Memo((a, b) => a + b);
+
+console.log(memoizedFunc(3, 5));
+console.log(memoizedFunc(3, 5));
+console.log(memoizedFunc(3, 5));
+console.log(memoizedFunc(3, 5));
+console.log(memoizedFunc(3, 5));
+console.log(memoizedFunc(5, 5));
+console.log(memoizedFunc(5, 5));
+
+console.log(counter);
+
+```
+kod xüsusi açar yaratma yanaşmasından istifadə edərək memoizing funksiyasının həyata keçirilməsini nümayiş etdirir. Budur kodun izahı:
+Yadda saxlanılan funksiyanın neçə dəfə çağırıldığını izləmək üçün sayğac dəyişəni işə salınır.
+Arqument kimi geri çağırış funksiyasını qəbul edən Memo funksiyası müəyyən edilmişdir.
+Memo funksiyasının daxilində keşləşdirilmiş nəticələri saxlamaq üçün cash obyekti yaradılır. Bu obyekt keşlənmiş dəyərlər üçün unikal açar-dəyər cütlərini saxlayacaq.
+Memo funksiyası …args spread operatorundan istifadə edərək istənilən sayda arqumentləri qəbul edən yeni funksiya qaytarır.
+Qaytarılan funksiya daxilində açar args.join('-') metodundan istifadə edərək arqumentləri defislə birləşdirərək yaradılır.
+Funksiya açarın cash obyektində artıq olub olmadığını yoxlayır. Əgər belədirsə, o, həmin açarla əlaqəli keşlənmiş dəyəri qaytarır.
+Əgər açar cash obyektində tapılmazsa, o, geri çağırış (…args) istifadə edərək təqdim edilmiş arqumentlərlə orijinal geri çağırış funksiyasını işə salır. Nəticə açarla cash obyektinə təyin edilir.
+Hər dəfə orijinal geri çağırış funksiyası çağırıldıqda sayğac dəyişəni artırılır.
+Nəhayət, açara uyğun keşlənmiş nəticə qaytarılır.
+Təqdim olunan nümunə eyni arqumentlərlə yadda saxlanılan funksiyaya çoxsaylı çağırışları nümayiş etdirir. Funksiya lazımsız hesablamalardan qaçaraq dublikat call üçün keşlənmiş nəticəni alır. Sayğac dəyişəni orijinal funksiyanın çağırış sayını izləmək üçün də istifadə olunur, bu funksiya çağırışlarının azaldılmasında memoizingin faydalarını göstərir.
+Nəzərə alın ki, bu tətbiq memoizing funksiyaya ötürülən arqumentlərin seriallaşdırıla biləcəyini və heç bir problem olmadan defisdən istifadə etməklə birləşdirilə və ya sətirə çevrilə bilən olaraq nəzərdə tutur.
+
 
 ## Tərcümələr
 
